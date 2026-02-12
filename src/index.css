@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+
+    --primary: 215 60% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 20% 95%;
+    --secondary-foreground: 220 20% 10%;
+
+    --muted: 210 15% 93%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 215 50% 92%;
+    --accent-foreground: 215 60% 32%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 20% 82%;
+    --input: 215 20% 82%;
+    --ring: 215 60% 42%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 210 20% 98%;
+    --card: 220 18% 14%;
+    --card-foreground: 210 20% 98%;
+    --popover: 220 18% 14%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 215 60% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 220 15% 20%;
+    --muted-foreground: 215 15% 60%;
+    --accent: 215 30% 25%;
+    --accent-foreground: 215 50% 80%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
+    --ring: 215 60% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 3mm;
+    @top-left { content: none; }
+    @top-center { content: none; }
+    @top-right { content: none; }
+    @bottom-left { content: none; }
+    @bottom-center { content: none; }
+    @bottom-right { content: none; }
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .print-a4 {
+    width: 204mm;
+    max-width: 204mm;
+    min-height: auto;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 8pt;
+  }
+
+  .print-a4 * {
+    font-size: inherit;
+  }
+
+  .print-a4 .mb-4 {
+    margin-bottom: 2mm;
+  }
+
+  .print-a4 .mb-6 {
+    margin-bottom: 3mm;
+  }
+
+  .print-a4 .py-2, .print-a4 .py-3 {
+    padding-top: 1mm;
+    padding-bottom: 1mm;
+  }
+
+  .print\\:hidden {
+    display: none !important;
+  }
+}
