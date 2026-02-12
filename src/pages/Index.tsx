@@ -6,6 +6,7 @@ import { Shield, Lock, LogOut, Trash2, FileSpreadsheet } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
 import * as XLSX from "xlsx";
+import logo from "@/assets/logo-kwangdong.jpg";
 
 interface CompanyInfo {
   companyName: string;
